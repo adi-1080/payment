@@ -1,0 +1,26 @@
+{
+  "name": "payment-gateway",
+  "module": "index.ts",
+  "scripts": {
+    "dev": "bun --watch src/server.ts",
+    "worker": "bun src/queues/payment.worker.ts"
+  },
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "^1.3.13"
+  },
+  "peerDependencies": {
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "bullmq": "^5.76.6",
+    "dotenv": "^17.4.2",
+    "hono": "^4.12.18",
+    "ioredis": "^5.10.1",
+    "mongoose": "^9.6.1",
+    "nanoid": "^5.1.11",
+    "pino": "^10.3.1",
+    "zod": "^4.4.3"
+  }
+}
